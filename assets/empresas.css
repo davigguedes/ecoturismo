@@ -103,3 +103,39 @@ background: #D9D9D9;
     background: rgba(0, 11, 32, 0.65);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+.navbar{
+    height: 96px;
+    width: 100%;
+    background: rgba(0, 11, 32, 0.65);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar img{
+    width: 68px;
+    height: 68px;
+    margin-left: 41px;
+    flex-shrink: 0;
+    border-radius: 100px;
+}
+.navbar ul{
+    list-style: none;
+    text-decoration: none;
+    margin-right: 41px;
+    color: #FFF;
+    font-family: Roboto Mono;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.navbar li:hover{
+    cursor: pointer;
+}
+.navbar a{
+    text-decoration: none;
+    color: #fff;
+}
