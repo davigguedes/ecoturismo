@@ -8,7 +8,7 @@ body{
     display:grid;
     grid-template-columns: 2fr 1fr;
     flex-shrink: 0;
-    background: url(assets/img/background.png) rgb(181, 14, 14) 50% / cover no-repeat;
+    background: url(img/background.png) rgb(181, 14, 14) 50% / cover no-repeat;
     align-items: center;
     justify-content: center;
     justify-items: center;
