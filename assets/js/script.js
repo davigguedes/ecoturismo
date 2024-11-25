@@ -59,4 +59,3 @@ document.addEventListener("DOMContentLoaded", function () {
     // Exibir o primeiro item e aplicar o gradiente correspondente ao carregar a página
     showItem(0);
   });
-  
