@@ -1,8 +1,9 @@
 body{
     margin: 0;
     background: linear-gradient(119deg, #BAFFCD 31.41%, #D7B012 100.22%);
+    transition: background-color 0.5s ease;
 }
-
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 .navbar{
     height: 96px;
     width: 100%;
@@ -16,6 +17,7 @@ body{
     justify-content: space-between;
     align-items: center;
 }
+
 .navbar img{
     width: 68px;
     height: 68px;
@@ -33,20 +35,37 @@ body{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    display:flex;
+    flex-direction: row;
+    padding: 10px;
 }
 .navbar li:hover{
     cursor: pointer;
+}
+
+.navbar li{
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .navbar a{
     text-decoration: none;
     color: #fff;
 }
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 .ods{
     display: flex;
+    overflow: hidden;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    transition: background-color 0.5s ease;
+    transition: opacity 0.3s ease-in;
+    opacity: 1;
+    padding-top: 96px;
 }
+
 .ods .descricao{
     width: 100dvh;
     height: 628px;
@@ -58,10 +77,14 @@ body{
     width: 100%;
     max-width: 550px; 
     height: auto; 
+    transition: transform 0.5s ease;
+}
+.odsimg.rotate {
+  transform: rotate(20deg);
 }
 
 .carousel-container {
-    width: 100%;
+    width: 100dvh;
     margin: auto;
     position: relative;
     display: flex;
@@ -75,7 +98,6 @@ body{
       overflow: hidden;
   
       .item {
-        
         opacity: 0;
         width: 100%;
         height: 100%;
@@ -172,9 +194,10 @@ body{
    width: 80%;
 }
 
-
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
 
 .dicas {
+    width: 100%;
     border-top: 31px solid rgba(0, 0, 30, 0.68);
     border-bottom: 31px solid rgba(0, 0, 30, 0.68);
     background: rgba(0, 11, 32, 0.65);
@@ -183,7 +206,6 @@ body{
     grid-template-columns: 3 repeat(auto-fit, minmax(3, 1fr));
     justify-items: center; 
     gap: 20px; 
-
 }
 
 .dicas .TituloDicas {
@@ -192,31 +214,87 @@ body{
     height: auto;
     margin-bottom: 101px;
     margin-top: 21px;
-    display:block;
 }
 
 .dicas .dica {
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
     width: 433px;
-    height: 302px;
-    background: #D9D9D9;
+    height: auto;
+    background: #00000056;
     margin-bottom: 123px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.dica .btn {
+  align-self: center;
+  text-decoration: none;
+  color: black;
+  
+}
+.dica p{
+  height: 110px;
+  padding: 10px;
+  overflow: hidden;
+  color: white;
+}
+.dica h3{
+  color: white;
+}
+.dica .btn {
+  align-items: center;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: .375em;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #363636;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1rem;
+  height: 2.5em;
+  justify-content: center;
+  line-height: 1.5;
+  padding: calc(.5em - 1px) 1em;
+  position: relative;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+
+.dica .btn:active {
+  border-color: #4a4a4a;
+  outline: 0;
+}
+
+.dica .btn:focus {
+  border-color: #485fc7;
+  outline: 0;
+}
+
+.dica .btn:hover {
+  border-color: #b5b5b5;
+}
+
+.dica .btn:focus:not(:active) {
+  box-shadow: rgba(72, 95, 199, .25) 0 0 0 .125em;
 }
 
 .boxdicas{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin-left: 41px;
-    margin-right: 41px;
+    margin: 0 20px;
+    
 }
-.footer{
-    margin-top: 120px;
-    height: 236px;
-    flex-shrink: 0;
-    fill: rgba(0, 11, 32, 0.81);
-    background: rgba(0, 11, 32, 0.65);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
+
 
 .inputbusca {
     font-family: "SF Pro";
@@ -232,10 +310,85 @@ body{
     margin-bottom: 100px;
   }
 
-.inputbusca:focus {
+  .inputbusca:focus {
     box-shadow: 5.5px 7px 0 black;
   }
 
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+  .footer{
+    margin-top: 120px;
+    height: 236px;
+    flex-shrink: 0;
+    fill: rgba(0, 11, 32, 0.81);
+    background: rgba(0, 11, 32, 0.65);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+.Roupas{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.content {
+  width: 100%;
+  max-width: 1000px;
+  display:flex;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  
+}
+
+#second,#third,#four,#five,#six{
+  display: none;
+}
+.content img{
+  width: 100%;
+}
+.buttons{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.buttons button{
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(0, 255, 76);
+  transition: 0.3s;
+  cursor: pointer;
+  transform-origin: 0 100%;
+}
+.buttons button img{
+  width: 180px;
+}
+.buttons:has(button:hover) button:not(:hover){
+  filter: grayscale(1) blur(0.05em);
+  transform: translateY(20px)
+}
+
+
+/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+
+@media(max-width: 769px){
+  /* .content img{
+    width: 40%;
+  } */
+  .buttons{
+    width: 100%;
+    overflow-x: scroll;
+    justify-content: left;
+  }
+  .buttons button img{
+    width: 150px;
+  }
+}
 
 @media (max-width: 600px) {
     .boxdicas{
@@ -252,6 +405,27 @@ body{
         background: #D9D9D9;
         margin-bottom: 123px;
 
+    }
+    /* .content img{
+      width: 75%;
+    } */
+    .carousel-container{
+      width: 100%;
+      height: auto;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      justify-items: center;
+      padding: 20px;
+      margin: 0;
+    }
+    .carousel{
+      height: auto;
+      width: 100%;
+      margin: 10px;
+    }
+    .item p{
+      display: none;
     }
 }
 @media (max-width: 1000px )  {
@@ -270,16 +444,31 @@ body{
       }
     .dicas .dica {
         width: 100%;
-        height: 302px;
+        height: auto;
         background: #D9D9D9;
         margin-bottom: 123px;
 
     }
-    .ods{
-        margin-top: 96px;
-    }
     .navbar{
         position: fixed;
         top: 0;
+    }
+    .ods{
+      padding-top: 29px;
+    }
+    .carousel-container{
+      width: 100%;
+      height: auto;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      justify-items: center;
+      padding: 20px;
+      margin: 0;
+    }
+    .carousel{
+      height: auto;
+      width: 100%;
+      margin: 10px;
     }
 }
