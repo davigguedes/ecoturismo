@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Eco-Ativa</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Mono+One&display=swap');
+        </style>
+        <script src="https://kit.fontawesome.com/e7ad293643.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="navbar">
+            <a href="/index.html"><img src="/assets/img/Folha.png" alt="logo"></a>
+            <ul>
+                <li><a href="/index.html"><i class="fa-solid fa-house"></i></a></li>
+                <!-- botao usuario -->
+                <div class="dropdown">
+                    <button class="dropdown-button" onclick="toggleDropdown()"><i class="fa-solid fa-user"></i></button>
+                    <div class="dropdown-content">                    
+                    <a style="font-size: 16px;" href="/assets/pages/configurarPerfil.html">Perfil</a>
+                    <a style="font-size: 16px;" href="/index.html">Sair</a>                  
+                    </div>
+                </div>
+                <!-- Final do drow donw -->
+            </ul>
+        </nav>
+    </header>
+
+    <h1 style="text-align: center;" id="user-info">  </h1>
+<!--<p id="user-info"></p> --> 
+    <button id="criar">Cadastrar Dica</button>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">X</span>
+                <h2> Cadastro de Dicas </h2>
+                <label for="nome" > Titulo: </label> 
+                <input id="name" type="text">
+                <br>
+                <label for="nome" > Descrição: </label>
+                <input id="name" type="text"> <br> <br>
+                <i class="fa-solid fa-utensils"><input id="alimetaçao" type="checkbox"></i>
+                <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/waterfall.png" alt="waterfall"/><input id="cachoeira" type="checkbox">
+                <i class="fa-solid fa-campground"><input id="camping" type="checkbox"></i>
+                <i class="fa-solid fa-tree"><input id="montanha" type="checkbox"></i>
+                <i class="fa-solid fa-umbrella-beach"><input id="praia" type="checkbox"></i>
+                <i class="fa-solid fa-restroom"><input id="banheiro" type="checkbox"></i>
+                <br>
+                <label for="nome" > Link: </label>
+                <input id="name" type="text"> 
+                <div class="button_login"> <br>
+                <a href="#"> <button id="cadastrarDica" >Cadastrar </button></a>
+                </div>                    
+        </div>
+    </div>
+    
+
+    <script src="/assets/js/logado.js" >  </script>
+</body>
+</html>
+
+<!-- login para teste
+        email : "goku@crunchyroll.com",
+        senha_hash : "omaisforte"
+-->

@@ -122,6 +122,8 @@
         </div>
     </div>
 
+<!--<img src="/assets/pages/telaLogada.html" -->
+
 
     <script>
         document.getElementById('loginform').addEventListener('submit', async (event) => {
@@ -151,8 +153,9 @@
                 const result = await response.json();
 
                 if (response.ok) {
+                    sessionStorage.setItem('userData', JSON.stringify(result));
                     alert('Login Realizado com sucesso.');
-                    window.location.href = '/ecoturismo/ecoturismo/index.html';
+                    window.location.href = '/assets/pages/telaLogada.html';
                 } else {
                     alert(result.message || 'Email ou senha inválidos, tente novamente');
                 }
