@@ -21,7 +21,7 @@
                     <button class="dropdown-button" onclick="toggleDropdown()"><i class="fa-solid fa-user"></i></button>
                     <div class="dropdown-content">                    
                     <a style="font-size: 16px;" href="/assets/pages/configurarPerfil.html">Perfil</a>
-                    <a style="font-size: 16px;" href="/index.html">Sair</a>                  
+                    <a style="font-size: 16px;" id="deslogar" href="/index.html">Sair</a>                  
                     </div>
                 </div>
                 <!-- Final do drow donw -->
@@ -30,30 +30,42 @@
     </header>
 
     <h1 style="text-align: center;" id="user-info">  </h1>
+    <h1 style="display: none;" id="user-id">  </h1>
+
 <!--<p id="user-info"></p> --> 
     <button id="criar">Cadastrar Dica</button>
+    <a href="/assets/pages/todasDicas.html"><button >Todas as Dicas </button> </a>
+    
 
-    <div id="modal" class="modal">
+    <div id="modal" style="display: none;" class="modal">
         <div class="modal-content">
             <span class="close">X</span>
                 <h2> Cadastro de Dicas </h2>
-                <label for="nome" > Titulo: </label> 
-                <input id="name" type="text">
-                <br>
-                <label for="nome" > Descrição: </label>
-                <input id="name" type="text"> <br> <br>
-                <i class="fa-solid fa-utensils"><input id="alimetaçao" type="checkbox"></i>
-                <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/waterfall.png" alt="waterfall"/><input id="cachoeira" type="checkbox">
-                <i class="fa-solid fa-campground"><input id="camping" type="checkbox"></i>
-                <i class="fa-solid fa-tree"><input id="montanha" type="checkbox"></i>
-                <i class="fa-solid fa-umbrella-beach"><input id="praia" type="checkbox"></i>
-                <i class="fa-solid fa-restroom"><input id="banheiro" type="checkbox"></i>
-                <br>
-                <label for="nome" > Link: </label>
-                <input id="name" type="text"> 
-                <div class="button_login"> <br>
-                <a href="#"> <button id="cadastrarDica" >Cadastrar </button></a>
-                </div>                    
+                <form id="form-dicas-criar" > 
+                    <label for="titulo" > Titulo: </label> 
+                    <input id="titulo" type="text" required>
+                    <br>
+                    <label for="descricao" > Descrição: </label>
+                    <input id="descricao" type="text" required> <br> <br>
+
+                    <i class="fa-solid fa-utensils"><input id="flag_alimentacao" name="flag_alimentacao" type="checkbox"></i>
+
+                    <img width="20" height="20" src="https://img.icons8.com/ios-filled/50/waterfall.png" alt="waterfall"/><input id="flag_cachoeira" name="flag_cachoeira" type="checkbox">
+
+                    <i class="fa-solid fa-campground"><input id="flag_camping" name="flag_camping" type="checkbox"></i>
+
+                    <i class="fa-solid fa-tree"><input id="flag_montanha" name="flag_montanha" type="checkbox"></i>
+
+                    <i class="fa-solid fa-umbrella-beach"><input id="flag_praia" name="flag_praia" type="checkbox"></i>
+
+                    <i class="fa-solid fa-restroom"><input id="flag_vestuario" name="flag_vestuario" type="checkbox"></i>
+                    <br>
+                    <label for="link" > Link: </label>
+                    <input id="link" type="text" required> 
+                <div class="Cadastrar_dica"> <br>
+                <button id="cadastrarDica" type="submit" >Cadastrar </button>
+                </div>   
+            </form>                 
         </div>
     </div>
     

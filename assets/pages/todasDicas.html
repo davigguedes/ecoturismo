@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Eco-Ativa</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Mono+One&display=swap');
+        </style>
+    <script src="https://kit.fontawesome.com/e7ad293643.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="navbar">
+            <a href="/index.html"><img src="/assets/img/Folha.png" alt="logo"></a>
+            <ul>
+                <li><a href="/index.html"><i class="fa-solid fa-house"></i></a></li>
+                <!-- botao usuario -->
+                <div class="dropdown">
+                    <button class="dropdown-button" onclick="toggleDropdown()"><i class="fa-solid fa-user"></i></button>
+                    <div class="dropdown-content">                    
+                    <a style="font-size: 16px;" href="/assets/pages/configurarPerfil.html">Perfil</a>
+                    <a style="font-size: 16px;" id="deslogar" href="/index.html">Sair</a>                  
+                    </div>
+                </div>
+                <!-- Final do drow donw -->
+            </ul>
+        </nav>
+    </header>
+    <section class="dicas" id="dicas">
+        <img src="/assets/img/TituloDicas.png" alt="TituloDicas" class="TituloDicas" id="TituloDicas">
+        <div class="boxpesquisa" id="boxpesquisa">
+            <input type="text" id="inputbusca" class="inputbusca" placeholder="Pesquisar Titulo, Lugar, Tópico...">
+        </div>
+        <div class="boxdicas" id="boxdicas">
+        <div class="dica" id="dica" >
+        </div>
+        </div>
+        
+    </section>
+    <footer class="footer" id="footer">
+    </footer>
+    <script src="/assets/js/logado.js" >  </script>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/Api.js"></script>
+   
+    
+</body>
+</html>

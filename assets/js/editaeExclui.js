@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 form = document.getElementById("form-usuario-editar")
   if (form) {
-    let usuario = sessionStorage.setItem("usuarioLogado", data);
+    let usuario = sessionStorage.getItem("userData");
 
-    if (usuarioData) {
+    if (!usuario) {
       throw new Error('Usuário não encontrado!')
     }
     document.getElementById("nome").value = usuario.nome
@@ -39,7 +39,7 @@ form = document.getElementById("form-usuario-editar")
       formData.append("senha_nova", document.getElementById("senha_nova").value);
       formData.append("senha_confirmacao", document.getElementById("senha_confirmacao").value);
 
-      fetch(`https://flask-ecoturismo-humbertosamora.replit.app/usuario/${usuario.id}`, { method: 'POST', body: formData })
+      fetch(`https://flask-ecoturismo-humbertosamora.replit.app/usuario/${usuario.id}`, { method: 'PUT', body: formData })
         .then(response => {
           if (!response.ok) {
             console.log('Erro na requisição: ' + response.status)
