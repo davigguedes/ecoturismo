@@ -98,6 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
       fetch("https://flask-ecoturismo-humbertosamora.replit.app/dicas", {
         method: "POST",
         body: formData,
+        credentials: 'include'
       })
         .then((response) => {
           if (!response.ok) {
@@ -107,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(() => {
           alert("Dica cadastrada com sucesso!");
-          window.location.href = "./index.html";
+          window.location.href = "/index.html";
         })
         .catch((error) => {
           console.error("Erro ao criar dica: ", error);

@@ -39,7 +39,9 @@ form = document.getElementById("form-usuario-editar")
       formData.append("senha_nova", document.getElementById("senha_nova").value);
       formData.append("senha_confirmacao", document.getElementById("senha_confirmacao").value);
 
-      fetch(`https://flask-ecoturismo-humbertosamora.replit.app/usuario/${usuario.id}`, { method: 'PUT', body: formData })
+      fetch(`https://flask-ecoturismo-humbertosamora.replit.app/usuario/${usuario.id}`, { method: 'PUT', body: formData,
+      credentials: 'include'
+       })
         .then(response => {
           if (!response.ok) {
             console.log('Erro na requisição: ' + response.status)
@@ -47,11 +49,12 @@ form = document.getElementById("form-usuario-editar")
         })
         .then(data => {
           // Salvar no sessionStorage porque quando muda de página html as variáveis globais são apagadas
-
+          alert("Dados alterados com sucesso!");
           sessionStorage.setItem("userData", data);
           window.location.href = "/assets/pages/telaLogada.html"
         })
         .catch(error => {
+          alert("Error!");
           console.error('Erro ao editar dados do usuário: ', error);
         })
     })

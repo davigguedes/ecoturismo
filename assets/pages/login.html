@@ -146,7 +146,8 @@
                 const response = await fetch('https://flask-ecoturismo-humbertosamora.replit.app/login', {
                     method: 'POST',
                     // headers:{ 'Content-Type': 'application/json'},
-                    body: formData
+                    body: formData,
+                    credentials: 'include'
                     // body: JSON.stringify({email, senha})
                 });
 
