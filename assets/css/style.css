@@ -12,6 +12,9 @@ body{
     z-index: 9;
 }
 
+#registrardica_icon{
+  display:none;
+  }
 .navbar{
     display: flex;
     justify-content: space-between;

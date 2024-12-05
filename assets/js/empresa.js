@@ -16,11 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
     carregarEmpresa();
     const loginIcon = document.getElementById("login-icon");
     const userData = sessionStorage.getItem("userData");
-
+    const registrardica_icon = document.getElementById("registrardica_icon");
       if (userData) {
         // Usuário está logado, altere o ícone
         loginIcon.href = "/assets/pages/configurarPerfil.html"; // Redirecionar para a página de perfil
         loginIcon.innerHTML = '<i class="fa-solid fa-user"></i>'; // Ícone de usuário
+        registrardica_icon.style.display = "block";
       }
   });
   

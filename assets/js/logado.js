@@ -93,3 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+let button_remover = document.querySelector(".buttonRemover");
+button_remover.addEventListener("click", ()=>{
+  window.location.href = "../pages/removerdica.html";
+});

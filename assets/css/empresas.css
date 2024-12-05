@@ -16,6 +16,9 @@ body{
     opacity: 1;
     transition: opacity 0.5s ease;
 }
+#registrardica_icon{
+display:none;
+}
 .box{
     display:grid;
     height: 100%;

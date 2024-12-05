@@ -16,7 +16,9 @@ let button = document.querySelector(".salvar_button")
     let usuario = sessionStorage.getItem("userData");
 
     if (!usuario) {
+      window.location.href = "/index.html";
       throw new Error('Usuário não encontrado!')
+      
     }
     document.getElementById("nome").value = usuario.nome
     document.getElementById("nick").value = usuario.nick
@@ -64,6 +66,12 @@ let button = document.querySelector(".salvar_button")
   button_sair.addEventListener("click", () => {
 
     sessionStorage.removeItem("userData");
+
+    window.location.href = "/index.html";
+
+  });
+  let button_inicio = document.querySelector(".voltar_button")
+  button_inicio.addEventListener("click", () => {
 
     window.location.href = "/index.html";
 
