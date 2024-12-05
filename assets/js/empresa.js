@@ -45,43 +45,53 @@ document.addEventListener('DOMContentLoaded', () => {
         boxempresa.innerHTML = '';
   
         data.forEach(empresa => {
-            
           const divEmpresa = document.createElement('div');
-          divEmpresa.classList.add('empresa','card', 'mb-3', 'p-3');
+                divEmpresa.classList.add('empresa', 'card', 'mb-3', 'p-3');
+          const divImagem = document.createElement('div');
+          divImagem.classList.add('empresa-imagem');
+          if (empresa.imagem) {
+              const imagem = document.createElement('img');
+              imagem.src = `data:image/png;base64,${empresa.imagem}`;
+              imagem.alt = `Logo da empresa ${empresa.nome}`;
+              divImagem.appendChild(imagem);
+          } else {
+              divImagem.textContent = 'Imagem não disponível';
+          }
 
+          divEmpresa.appendChild(divImagem); 
+          const divConteudo = document.createElement('div');
+          divConteudo.classList.add('empresa-conteudo');
 
-          const nome  = document.createElement('h3');
+          const nome = document.createElement('h3');
           nome.textContent = `${empresa.nome}`;
-          divEmpresa.appendChild(nome);
-  
+          divConteudo.appendChild(nome);
 
           const cnpj = document.createElement('p');
-          cnpj.textContent =  ` CNPJ: ${empresa.cnpj} `; 
+          cnpj.textContent = `CNPJ: ${empresa.cnpj}`;
+          divConteudo.appendChild(cnpj);
 
-          divEmpresa.appendChild(cnpj);
-  
-
-          const email= document.createElement('p');
+          const email = document.createElement('p');
           email.innerHTML = `<strong>Email:</strong> <a href="mailto:${empresa.email}">${empresa.email}</a>`;
-          divEmpresa.appendChild(email);
+          divConteudo.appendChild(email);
 
-         const site = document.createElement('p');
-         site.innerHTML = `<strong>Site:</strong> <a href="${empresa.site}" target="_blank">${empresa.site}</a>`;
-         divEmpresa.appendChild(site);
+          const site = document.createElement('p');
+          site.innerHTML = `<strong>Site:</strong> <a href="${empresa.site}" target="_blank">${empresa.site}</a>`;
+          divConteudo.appendChild(site);
 
-         const redesSociais = document.createElement('div');
-         redesSociais.innerHTML= `
-                    <strong>Redes Sociais:</strong>
-                    <p>
-                        ${empresa.facebook ? `<a href="${empresa.facebook}" target="_blank">Facebook</a>  | ` : ''}
-                        ${empresa.instagram ? `<a href="${empresa.instagram}" target="_blank">Instagram</a> | ` : ''}
-                        ${empresa.tiktok ? `<a href="${empresa.tiktok}" target="_blank">TikTok</a> | ` : ''}
-                        ${empresa.youtube ? `<a href="${empresa.youtube}" target="_blank">YouTube</a>` : ''}
-                    </p>
-                `;
-                divEmpresa.appendChild(redesSociais);
-                
-                boxempresa.appendChild(divEmpresa);
+          const redesSociais = document.createElement('div');
+          redesSociais.innerHTML = `
+              <strong>Redes Sociais:</strong>
+              <p>
+                  ${empresa.facebook ? `<a href="${empresa.facebook}" target="_blank">Facebook</a> | ` : ''}
+                  ${empresa.instagram ? `<a href="${empresa.instagram}" target="_blank">Instagram</a> | ` : ''}
+                  ${empresa.tiktok ? `<a href="${empresa.tiktok}" target="_blank">TikTok</a> | ` : ''}
+                  ${empresa.youtube ? `<a href="${empresa.youtube}" target="_blank">YouTube</a>` : ''}
+              </p>`;
+          divConteudo.appendChild(redesSociais);
+
+          divEmpresa.appendChild(divConteudo);
+
+          boxempresa.appendChild(divEmpresa);
         });
       })
       .catch(error => {
