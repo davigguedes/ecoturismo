@@ -39,6 +39,7 @@ document.getElementById("form-dicas-remover").addEventListener("submit", async (
         // Remover a dica usando o ID
         const deleteResponse = await fetch(`${apiBaseUrl}/${dica.id}`, {
             method: "DELETE",
+            credentials: "include",
             headers: {
                 "Content-Type": "application/json",
             },
