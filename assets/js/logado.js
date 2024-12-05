@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         .then(() => {
           alert("Dica cadastrada com sucesso!");
-          window.location.href = "/index.html";
+          // window.location.href = "/index.html";
         })
         .catch((error) => {
           console.error("Erro ao criar dica: ", error);
