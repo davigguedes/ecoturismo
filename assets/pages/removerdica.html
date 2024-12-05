@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RemoverDica</title>
+    <link rel="stylesheet" href="../css/telaLogada.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rubik+Mono+One&display=swap');
+        </style>
+        <script src="https://kit.fontawesome.com/e7ad293643.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar" id="navbar">
+            <a href="../../index.html"><img src="../img/Folha.png" alt="logo"></a>
+            <ul>
+                <li><a href="../../index.html"><i class="fa-solid fa-house"></i></a></li>
+                <li><a href="/assets/pages/empresas.html"><i class="fa-solid fa-briefcase"></i></a></li>
+                <li><a href=""><i class="fa-solid fa-signs-post"></i></a></li>
+                <li><a href="/assets/pages/configurarPerfil.html"><i class="fa-solid fa-user"></i></a></li>          
+            </ul>
+        </nav>
+
+    </header>
+
+    <h1 style="text-align: center;" id="user-info">  </h1>
+    <h1 style="display: none;" id="user-id">  </h1>
+
+    <main>
+        <div class="dados">
+                <h2>Remover Dica</h2>
+            <form id="form-dicas-remover" > 
+                    <div class="input-field">
+                    <input id="nome_dica" type="text" required>
+                    <label for="nome_dica" >Titulo da dica</label> 
+                </div>
+                <button class="cadastrarDica" type="submit">RemoverDica</button> 
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer" id="footer">
+        <div class="footer-logo">
+          <img src="../img/Folha.png" alt="Logo Ecoturismo">
+        </div>
+        <div class="footer-text">
+          <p>Ecoturismo - todos os direitos reservados aos amantes da natureza :)</p>
+        </div>
+    </footer>
+    <script src="../js/removerdica.js"></script>
+</body>
+</html>

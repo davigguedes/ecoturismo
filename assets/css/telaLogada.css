@@ -148,3 +148,29 @@ padding-right: 20px;
   text-decoration: none;
   color: #fff;
 }
+.buttonRemover{
+  margin-top: 20px;
+  max-width: 37%;
+  align-self: flex-end;
+}
+
+.footer {
+  background-color: #4A4722;
+  color: #FFF;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer-logo img {
+  height: 80px;
+  margin-right: 10px;
+}
